@@ -1,0 +1,99 @@
+html {
+    font-size: 16px;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --plumColor: #5d54a3;
+    --green: #37cc8b;
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: #e3e3e3;
+    --red: #ea8888;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.mainWrapper{
+    min-height: 100vh;
+    background-image: url(./images/bg-intro-mobile.png);
+    background-color: var(--red);
+    background-size: cover;
+}
+
+header {
+    padding: 5.5rem 1.875rem 4.375rem 1.875rem;
+    color: var(--white);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding-bottom: 1.875rem;
+    
+}
+
+.headerDescription {
+    font-size: 1rem;   
+}
+
+.free7days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.875rem;
+    border-radius: .5rem;
+    background-color: var(--plumColor);
+    height: 5.313rem;
+    color: var(--white);
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    /* height: 27.5rem; */
+    background-color: var(--white);
+    border-radius: .5rem;
+    margin: 1.5rem 1.875rem 0 1.875rem ;
+}
+
+input {
+    height: 3.5rem;
+    margin: 0.75rem 1.5rem;
+    border-radius: .5rem;
+    border: 0.125rem solid var(--grayishBlue);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-indent: 1.25rem;
+    
+}
+
+#firstName {
+    margin-top: 1.5rem;
+    
+}
+
+#button {
+
+    background-color: var(--green);
+    color: var(--white);
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
