@@ -1,99 +1,190 @@
-html {
-    font-size: 16px;
-  }
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-    --plumColor: #5d54a3;
-    --green: #37cc8b;
-    --darkBlue: hsl(249, 10%, 26%);
-    --grayishBlue: #e3e3e3;
-    --red: #ea8888;
-    --white: #ffffff;
+	--plumColor: #5d54a3;
+	--green: #37cc8b;
+	--greenActive: #77e2b4;
+	--darkBlue: hsl(249, 10%, 26%);
+	--grayishBlue: #b0abab;
+	--red: #ea8888;
+	--white: #ffffff;
+}
+
+html {
+	font-size: 16px;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    
+	font-family: 'Poppins', sans-serif;
 }
 
-.mainWrapper{
-    min-height: 100vh;
-    background-image: url(./images/bg-intro-mobile.png);
-    background-color: var(--red);
-    background-size: cover;
+.mainWrapper {
+	min-height: 100vh;
+	background-image: url(./images/bg-intro-mobile.png);
+	background-color: var(--red);
+	background-size: cover;
+	padding-bottom: 0.5rem;
 }
 
 header {
-    padding: 5.5rem 1.875rem 4.375rem 1.875rem;
-    color: var(--white);
-    text-align: center;
+	padding: 5.5rem 1.875rem 4.5rem 1.875rem;
+	color: var(--white);
+	text-align: center;
 }
 
 h1 {
-    font-size: 1.5rem;
-    padding-bottom: 1.875rem;
-    
+	font-size: 1.5rem;
+	padding-bottom: 1.875rem;
 }
 
 .headerDescription {
-    font-size: 1rem;   
+	font-size: 1rem;
 }
 
 .free7days {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1.875rem;
-    border-radius: .5rem;
-    background-color: var(--plumColor);
-    height: 5.313rem;
-    color: var(--white);
-    padding: 2.5rem;
-    text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 1.875rem;
+	border-radius: 0.5rem;
+	background-color: var(--plumColor);
+	height: 5.313rem;
+	color: var(--white);
+	padding: 2.5rem;
+	text-align: center;
+	box-shadow: 0px 12px 3px -3px rgba(4, 4, 4, 0.26);
 }
 
 .bold {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white);
+	border-radius: 0.5rem;
+	margin: 1.5rem 1.875rem 4.063rem 1.875rem;
+	box-shadow: 0px 12px 3px -3px rgba(4, 4, 4, 0.26);
+	position: relative;
+}
 
-    /* height: 27.5rem; */
-    background-color: var(--white);
-    border-radius: .5rem;
-    margin: 1.5rem 1.875rem 0 1.875rem ;
+.field {
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
 
 input {
-    height: 3.5rem;
-    margin: 0.75rem 1.5rem;
-    border-radius: .5rem;
-    border: 0.125rem solid var(--grayishBlue);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-indent: 1.25rem;
-    
+	height: 3.5rem;
+	margin: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	border: 0.125rem solid var(--grayishBlue);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	text-indent: 1.25rem;
+}
+
+.alertIcon {
+	position: absolute;
+	text-align: right;
+	right: 3rem;
+	bottom: 2.5rem;
+	display: none;
 }
 
 #firstName {
-    margin-top: 1.5rem;
-    
+	margin-top: 1.5rem;
 }
 
 #button {
-
-    background-color: var(--green);
-    color: var(--white);
-    text-transform: uppercase;
-    cursor: pointer;
-    
+	background-color: var(--green);
+	color: var(--white);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
+#button:hover {
+	background-color: var(--greenActive);
+}
+
+footer {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+footer p {
+	font-size: 0.625rem;
+	padding: 0 2rem;
+	color: var(--grayishBlue);
+}
+
+a {
+	text-decoration: none;
+	color: var(--red);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.error {
+	font-size: 0.7rem;
+	color: var(--red);
+	font-style: italic;
+	font-weight: 600;
+	text-align: right;
+	padding-right: 2rem;
+}
+
+@media screen and (min-width: 1300px) {
+	.mainWrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url(./images/bg-intro-desktop.png);
+	}
+
+	.hederWrapper {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: right;
+	}
+
+	header {
+		width: 37rem;
+		padding: 0 4.68rem 0 0;
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+		padding-right: 2rem;
+	}
+
+	main {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+	}
+
+	.free7days {
+		margin: 0;
+		width: 33.75rem;
+		height: 3.75rem;
+		padding: 0;
+	}
+
+	form {
+		width: 33.75rem;
+		margin: 1.5rem 0 0 0;
+	}
+}

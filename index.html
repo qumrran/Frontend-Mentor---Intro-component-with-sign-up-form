@@ -10,46 +10,109 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<div class="mainWrapper">
+			<div class="hederWrapper">
+				<header>
+					<h1>Learn to code by watching others</h1>
+					<p class="headerDescription">
+						See how experienced developers solve problems in real-time. Watching
+						scripted tutorials is great, but understanding how developers think
+						is invaluable.
+					</p>
+				</header>
+			</div>
 
-    <div class="mainWrapper">
-        <header>
-            <h1>Learn to code by watching others</h1>
-            <p class="headerDescription">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
-        </header>
-    
-        <main>
-            <div class="free7days">
+			<main>
+				<div class="free7days">
+					<p class="7dp">
+						<span class="bold">Try it free 7 days</span> then $20/mo. thereafter
+					</p>
+				</div>
 
-                <p class="7dp"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
-            </div>
-    
-            <form>
-                <label for="firstName"></label>
-                <input type="text" id="firstName" name="firstName" required placeholder="First Name">
-                
-                <label for="lastName"></label>
-                <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
-                
-                <label for="email"></label>
-                <input type="email" id="email" name="email" required placeholder="Email Address">
-                
-                <label for="password"></label>
-                <input type="password" id="password" name="password" required placeholder="Password">
-                
-                <input type="submit" value="Claim your free trial" id="button">
-    
-    
-                <p> By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
-              </form>
-    
-        </main>
-    
-    
-    </div>
+				<form>
+					<div class="field">
+						<label for="firstName"></label>
+						<input
+							type="text"
+							id="firstName"
+							name="firstName"
+							required
+							placeholder="First Name"
+						/>
 
-       <script src="./script.js"></script>
-    </body>
+						<span class="emptyFirstName error">First Name cannot be empty</span>
+
+						<span class="alertIcon FirstnameAlert"
+							><img src="./images/icon-error.svg" alt=""
+						/></span>
+					</div>
+
+					<div class="field">
+						<label for="lastName"></label>
+						<input
+							type="text"
+							id="lastName"
+							name="lastName"
+							required
+							placeholder="Last Name"
+						/>
+
+						<span class="emptyLastName error">Last Name cannot by empty</span>
+
+						<span class="alertIcon LastnameAlert"
+							><img src="./images/icon-error.svg" alt=""
+						/></span>
+					</div>
+
+					<div class="field">
+						<label for="email"></label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							placeholder="Email Address"
+						/>
+
+						<span class="emptyEmailAddress error">Email cannot be empty.</span>
+
+						<span class="alertIcon EmailAlert"
+							><img src="./images/icon-error.svg" alt=""
+						/></span>
+					</div>
+
+					<div class="field">
+						<label for="password"></label>
+						<input
+							type="password"
+							id="password"
+							name="password"
+							required
+							placeholder="Password"
+						/>
+
+						<span class="emptyPassword error">Password cannot be empty</span>
+
+						<span class="alertIcon passwordAlert"
+							><img src="./images/icon-error.svg" alt=""
+						/></span>
+					</div>
+
+					<input type="submit" value="Claim your free trial" id="button" />
+
+					<footer>
+						<p>
+							By clicking the button, you are agreeing to our
+							<a href="#">Terms and Services</a>
+						</p>
+					</footer>
+				</form>
+			</main>
+		</div>
+
+		<script src="./script.js"></script>
+	</body>
 </html>
